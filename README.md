@@ -19,6 +19,10 @@ I'm a fan of CapitalCase, and I don't think the word "Swift" should be in the na
 
 Neither of them currently apply to Swift
 
+- Branch protection
+
+GitHub offers a lot of control here. I've started doing a bare minimum: protecting the `main` branch from accidental force pushes and deletion. You can do this easily with Settings > Code and automation > Branches. Add a rule for `main` with all check boxes unchecked and done.
+
 ## Metadata
 
 - License
