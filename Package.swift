@@ -3,23 +3,23 @@
 import PackageDescription
 
 let settings: [SwiftSetting] = [
-    .enableExperimentalFeature("StrictConcurrency")
+	.enableExperimentalFeature("StrictConcurrency")
 ]
 
 let package = Package(
-    name: "Template",
-    products: [
-        .library(name: "Template", targets: ["Template"]),
-    ],
-    targets: [
-        .target(
-            name: "Template",
-            swiftSettings: settings
-        ),
-        .testTarget(
-            name: "TemplateTests",
-            dependencies: ["Template"],
-            swiftSettings: settings
-        ),
-    ]
+	name: "Template",
+	products: [
+		.library(name: "Template", targets: ["Template"]),
+	],
+	targets: [
+		.target(
+			name: "Template",
+			swiftSettings: settings
+		),
+		.testTarget(
+			name: "TemplateTests",
+			dependencies: ["Template"],
+			swiftSettings: settings
+		),
+	]
 )
