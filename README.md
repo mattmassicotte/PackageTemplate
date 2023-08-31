@@ -9,43 +9,43 @@ It is a little **opinionated**, but mostly just stuff that I've found useful. Fe
 
 ## Repository Details
 
-- Naming
+### Naming
 
 The golden rule: your package name should **not** be the same as public type within your package. This can result in a ridiculous situation where the compiler cannot distinuous between the module name and type name, and has make my life difficult in the past. Someone please send me a blog post or something about this and I will link to it.
 
 I'm a fan of CapitalCase, and I don't think the word "Swift" should be in the name either.
 
-- Turn off "Packages" and "Deployments"
+### Turn off "Packages" and "Deployments"
 
 Neither of them currently apply to Swift
 
-- Branch protection
+### Branch protection
 
 GitHub offers a lot of control here. I've started doing a bare minimum: protecting the `main` branch from accidental force pushes and deletion. You can do this easily with Settings > Code and automation > Branches. Add a rule for `main` with all check boxes unchecked and done.
 
 ## Metadata
 
-- License
+### License
 
 This is non-optional. Many users, for very valid reasons, will not even look at a package without a license. GitHub makes this easy. I have been a long-time user of the BSD 3-clause license. It is very permission, like MIT, but also specifically limits implicit endorcements from those involved.
 
 I'm, in general, not a fan of viral licenses, especially when that virality applies to linking. However, I appeciate why that was designed the way it was. Preventing open source abuse and exploitation is important and your choice of license can really matter there.
 
-- Code of Conduct
+### Code of Conduct
 
 "Let's be excellent to each other" is great! But, having a concrete set of rules about what that actually means, and what happens should those rules be broken is important. The [Contributor Covenant](https://www.contributor-covenant.org) has become popular and I think it is a great choice.
 
-- Badges
+### Badges
 
 I like throwing a few badges up on my repos to provide some glanceable information. I think it is easy to go overboard here, but you should also feel good about making this your own!
 
 ## Package.swift
 
-- Platforms
+### Platforms
 
 For a long time, I thought leaving platforms empty was the most compatible thing to do. However, this leave the effective platform/version up to the compiler. And, that can produce surprising results that change over time. Being explicit is best.
 
-- Swift 5.8
+### Swift 5.8
 
 This allows you to use `.enableExperimentalFeature("StrictConcurrency")`. Using concurrency without compiler checks is a bad idea. And you may be using it without even realizing it. `enableExperimentalFeature` requres 5.8, but the actual checks themselves require 5.9.
 
@@ -65,15 +65,15 @@ If you have tricks/hacks/custom actions to make this better, **please** let me k
 
 The [SPI](https://swiftpackageindex.com) is a no-brainer.
 
-- Discoverability
+### Discoverability
 
 If I have an idea for a library, I always do some searching on SPI first.
 
-- Build Checks
+### Build Checks
 
 Kind of like a mini CI. SPI will build your packages for many swift/platform combinations. I think making it very clear up front what platforms your package supports is very useful.
 
-- Hosted Documentation
+### Hosted Documentation
 
 Perhaps the most underrated feature. If you include DocC in your package, SPI will **host** it for you. You need a `.spi.yml` file for this to work.
 
