@@ -7,11 +7,11 @@ A template for Swift packages on GitHub
 
 It is a little **opinionated**, but mostly just stuff that I've found useful. Feel free to customize as needed. And if you have ideas for ways to improve this, open an issue or PR!
 
-## Repository Details
+## Repository `Details`
 
 ### Naming
 
-The golden rule: your package name should **not** be the same as public type within your package. This can result in a ridiculous situation where the compiler cannot distinuous between the module name and type name, and has make my life difficult in the past. Someone please send me a blog post or something about this and I will link to it.
+The golden rule: your package name should **not** be the same as a public type within your package. This can result in a ridiculous situation where the compiler cannot distinguish between the module name and type name, and has make my life difficult in the past. Someone please send me a blog post or something about this and I will link to it.
 
 I'm a fan of CapitalCase, and I don't think the word "Swift" should be in the name either.
 
@@ -27,9 +27,9 @@ GitHub offers a lot of control here. I've started doing a bare minimum: protecti
 
 ### License
 
-This is non-optional. Many users, for very valid reasons, will not even look at a package without a license. GitHub makes this easy. I have been a long-time user of the BSD 3-clause license. It is very permission, like MIT, but also specifically limits implicit endorcements from those involved.
+This is non-optional. Many users, for very valid reasons, will not even look at a package without a license. GitHub makes this easy. I have been a long-time user of the BSD 3-clause license. It is very permission, like MIT, but also specifically limits implicit endorsements from those involved.
 
-I'm, in general, not a fan of viral licenses, especially when that virality applies to linking. However, I appeciate why that was designed the way it was. Preventing open source abuse and exploitation is important and your choice of license can really matter there.
+I'm, in general, not a fan of viral licenses, especially when that virality applies to linking. However, I appreciate why that was designed the way it was. Preventing open source abuse and exploitation is important and your choice of license can really matter there.
 
 ### Code of Conduct
 
@@ -51,13 +51,13 @@ For a long time, I thought leaving platforms empty was the most compatible thing
 
 ### Swift 5.8
 
-This allows you to use `.enableExperimentalFeature("StrictConcurrency")`. Using concurrency without compiler checks is a bad idea. And you may be using it without even realizing it. `enableExperimentalFeature` requres 5.8, but the actual checks themselves require 5.9.
+This allows you to use `.enableExperimentalFeature("StrictConcurrency")`. Using concurrency without compiler checks is a bad idea. And you may be using it without even realizing it. `enableExperimentalFeature` requires 5.8, but the actual checks themselves require 5.9.
 
 ## GitHub Actions
 
 GitHub actions are mostly great. But there are two things that make them very un-great. GitHub is incredibly slow about bringing up new versions of macOS. This means "macOS-latest" is **never** the latest released version of macOS. That in itself might be a problem for a package that supports macOS. But, it can also impact the default Xcode version.
 
-The second problem is simulator names change and `xcodebuild` makes it very hard to not care. I have given up relying on defaults here, and I always make things explicit. Unforutnately this means manual maintanence, especially around WWDC.
+The second problem is simulator names change and `xcodebuild` makes it very hard to not care. I have given up relying on defaults here, and I always make things explicit. Unfortunately this means manual maintenance, especially around WWDC.
 
 - Host OS
 - Xcode version
@@ -83,7 +83,7 @@ Perhaps the most underrated feature. If you include DocC in your package, SPI wi
 
 ## Style
 
-For a very long time, I thought tabs vs spaces was a stupid thing to get worked up about. I thought spaces were clearly the right choice, and I never thought more about it. Then one day I learned that tabs can offer [accesibility improvements](https://adamtuttle.codes/blog/2021/tabs-vs-spaces-its-an-accessibility-issue/) for low-vision people. And that same advantage also helps to style code the way people prefer. So I switched and I encourage you to do same.
+For a very long time, I thought tabs vs spaces was a stupid thing to get worked up about. I thought spaces were clearly the right choice, and I never thought more about it. Then one day I learned that tabs can offer [accessibility improvements](https://adamtuttle.codes/blog/2021/tabs-vs-spaces-its-an-accessibility-issue/) for low-vision people. And that same advantage also helps to style code the way people prefer. So I switched and I encourage you to do same.
 
 Despite Xcode not supporting it, I still think including [editorconfig](https://editorconfig.org) support is a good idea. I'm a dreamer.
 
