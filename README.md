@@ -1,5 +1,4 @@
 [![Build Status][build status badge]][build status]
-[![License][license badge]][license]
 [![Platforms][platforms badge]][platforms]
 [![Documentation][documentation badge]][documentation]
 
@@ -31,6 +30,10 @@ I'm, in general, not a fan of viral licenses, especially when that virality appl
 - Code of Conduct
 
 "Let's be excellent to each other" is great! But, having a concrete set of rules about what that actually means, and what happens should those rules be broken is important. The [Contributor Covenant](https://www.contributor-covenant.org) has become popular and I think it is a great choice.
+
+- Badges
+
+I like throwing a few badges up on my repos to provide some glanceable information. I think it is easy to go overboard here, but you should also feel good about making this your own!
 
 ## Package.swift
 
@@ -84,8 +87,6 @@ By participating in this project you agree to abide by the [Contributor Code of 
 
 [build status]: https://github.com/mattmassicotte/PackageTemplate/actions
 [build status badge]: https://github.com/mattmassicotte/PackageTemplate/workflows/CI/badge.svg
-[license]: https://opensource.org/licenses/BSD-3-Clause
-[license badge]: https://img.shields.io/github/license/mattmassicotte/PackageTemplate
 [platforms]: https://swiftpackageindex.com/mattmassicotte/PackageTemplate
 [platforms badge]: https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fmattmassicotte%2FPackageTemplate%2Fbadge%3Ftype%3Dplatforms
 [documentation]: https://swiftpackageindex.com/mattmassicotte/PackageTemplate/main/documentation
