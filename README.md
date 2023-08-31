@@ -7,7 +7,7 @@ A template for Swift packages on GitHub
 
 It is a little **opinionated**, but mostly just stuff that I've found useful. Feel free to customize as needed. And if you have ideas for ways to improve this, open an issue or PR!
 
-## Repository `Details`
+## Repository Details
 
 ### Naming
 
@@ -27,7 +27,7 @@ GitHub offers a lot of control here. I've started doing a bare minimum: protecti
 
 ### License
 
-This is non-optional. Many users, for very valid reasons, will not even look at a package without a license. GitHub makes this easy. I have been a long-time user of the BSD 3-clause license. It is very permission, like MIT, but also specifically limits implicit endorsements from those involved.
+This is non-optional. Many users, for very valid reasons, will not even look at a package without a license. GitHub makes this easy. I have been a long-time user of the BSD 3-clause license. It is very permissive, like MIT, but also specifically limits implicit endorsements from those involved.
 
 I'm, in general, not a fan of viral licenses, especially when that virality applies to linking. However, I appreciate why that was designed the way it was. Preventing open source abuse and exploitation is important and your choice of license can really matter there.
 
