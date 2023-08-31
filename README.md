@@ -39,6 +39,10 @@ I'm, in general, not a fan of viral licenses, especially when that virality appl
 
 I like throwing a few badges up on my repos to provide some glanceable information. I think it is easy to go overboard here, but you should also feel good about making this your own!
 
+- Funding
+
+If you are using GitHub sponsorships, you know how this works. But just in case, please **do not** copy `.github/FUNDING.yml` into your own project.
+
 ## Package.swift
 
 ### Platforms
