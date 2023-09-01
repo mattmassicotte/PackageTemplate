@@ -11,9 +11,9 @@ It is a little **opinionated**, but mostly just stuff that I've found useful. Fe
 
 ### Naming
 
-The golden rule: your package name should **not** be the same as a public type within your package. This can result in a ridiculous situation where the compiler cannot distinguish between the module name and type name, and has make my life difficult in the past. Someone please send me a blog post or something about this and I will link to it.
+The golden rule: your package name should **not** be the same as a public type within your package. This can result in a ridiculous situation where the compiler cannot distinguish between the module name and type name, and has made my life difficult in the past. Someone please send me a blog post or something about this and I will link to it.
 
-I'm a fan of CapitalCase, and I don't think the word "Swift" should be in the name either.
+I'm a fan of CapitalCase. I don't think the word "Swift" should be in the name.
 
 ### Turn off "Packages" and "Deployments"
 
@@ -41,7 +41,7 @@ I like throwing a few badges up on my repos to provide some glanceable informati
 
 ### Funding
 
-If you are using GitHub sponsorships, you know how this works. But just in case, please **do not** copy `.github/FUNDING.yml` into your own project.
+If you are using GitHub sponsorships, you know how this works. But just in case, please **do not** copy my `.github/FUNDING.yml` into your own project.
 
 ## Package.swift
 
@@ -55,9 +55,11 @@ This allows you to use `.enableExperimentalFeature("StrictConcurrency")`. Using 
 
 ## GitHub Actions
 
-GitHub actions are mostly great. But there are two things that make them very un-great. GitHub is incredibly slow about bringing up new versions of macOS. This means "macOS-latest" is **never** the latest released version of macOS. That in itself might be a problem for a package that supports macOS. But, it can also impact the default Xcode version.
+GitHub actions are mostly great. But there are two things that make them very un-great. GitHub is incredibly slow about bringing up new versions of macOS. This means "macOS-latest" is **never** the latest released version of macOS. That alone might be a problem for a package that supports macOS. But, it can also impact the default Xcode version.
 
-The second problem is simulator names change and `xcodebuild` makes it very hard to not care. I have given up relying on defaults here, and I always make things explicit. Unfortunately this means manual maintenance, especially around WWDC.
+The second problem is simulator names change and `xcodebuild` makes it very hard to not care.
+
+I have given up relying on defaults here, and I always make things explicit. Unfortunately this means manual maintenance, especially around WWDC.
 
 - Host OS
 - Xcode version
@@ -75,7 +77,7 @@ If I have an idea for a library, I always do some searching on SPI first.
 
 ### Build Checks
 
-Kind of like a mini CI. SPI will build your packages for many swift/platform combinations. I think making it very clear up front what platforms your package supports is very useful.
+Kind of like a mini CI. SPI will build your packages for many swift/platform combinations. I think making it clear up front what platforms your package supports is very useful.
 
 ### Hosted Documentation
 
