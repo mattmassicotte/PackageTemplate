@@ -67,6 +67,8 @@ I have given up relying on defaults here, and I always make things explicit. Unf
 
 If you have tricks/hacks/custom actions to make this better, **please** let me know.
 
+Note! If your package contains more than one entry it its `products` array, you'll need to append `-Package` to the scheme name to get xcodebuilt tests to work.
+
 ## Swift Package Index
 
 The [SPI](https://swiftpackageindex.com) is a no-brainer.
