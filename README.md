@@ -43,7 +43,7 @@ I like throwing a few badges up on my repos to provide some glanceable informati
 
 Many people find explicit package installation instructions helpful, even just for convenient copy-paste into another `Package.swift` file. I like to include them, but you have to watch out for two things.
 
-- you should regularly bump your verison number
+- you should regularly bump your version number
 - packages that contain a library of a different name need a more-explicit dependency specification
 
 ```swift
@@ -90,7 +90,7 @@ I have given up relying on defaults here, and I always make things explicit. Unf
 
 If you have tricks/hacks/custom actions to make this better, **please** let me know.
 
-Note! If your package contains more than one entry it its `products` array, you'll need to append `-Package` to the scheme name to get xcodebuilt tests to work.
+Note! If your package contains more than one entry it its `products` array, you'll need to append `-Package` to the scheme name to get `xcodebuild` tests to work.
 
 ## Swift Package Index
 
