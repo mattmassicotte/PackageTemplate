@@ -39,6 +39,29 @@ I'm, in general, not a fan of viral licenses, especially when that virality appl
 
 I like throwing a few badges up on my repos to provide some glanceable information. I think it is easy to go overboard here, but you should also feel good about making this your own!
 
+### Install Instructions
+
+Many people find explicit package installation instructions helpful, even just for convenient copy-paste into another `Package.swift` file. I like to include them, but you have to watch out for two things.
+
+- you should regularly bump your verison number
+- packages that contain a library of a different name need a more-explicit dependency specification
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/ChimeHQ/PackageTemplate", from: "1.0.0")
+],
+targets: [
+    .target(
+        name: "UseCoreFunctionality",
+        dependencies: ["PackageTemplate"]
+    ),
+    .target(
+        name: "UsesDifferentProduct",
+        dependencies: [.product(name: "AnotherProduct", package: "PackageTemplate")]
+    ),
+]
+```
+
 ### Funding
 
 If you are using GitHub sponsorships, you know how this works. But just in case, please **do not** copy my `.github/FUNDING.yml` into your own project.
