@@ -110,7 +110,7 @@ Perhaps the most underrated feature. If you include DocC in your package, SPI wi
 
 ## Style
 
-For a very long time, I thought tabs vs spaces was a stupid thing to get worked up about. Then one day I learned that tabs can offer [accessibility improvements](https://adamtuttle.codes/blog/2021/tabs-vs-spaces-its-an-accessibility-issue/) for low-vision people. And that same advantage also helps to style code the way people prefer. So I switched and I encourage you to do same.
+For a very long time, I thought tabs vs spaces was a stupid thing to get worked up about. Then one day I learned that tabs can offer [accessibility improvements](https://adamtuttle.codes/blog/2021/tabs-vs-spaces-its-an-accessibility-issue/) for low-vision people. And that same advantage also helps to style code the way people prefer. So I switched to tabs and I encourage you to do same.
 
 Despite Xcode not supporting it, I still think including [editorconfig](https://editorconfig.org) support is a good idea. I'm a dreamer.
 
