@@ -70,7 +70,7 @@ If you are using GitHub sponsorships, you know how this works. But just in case,
 
 ### Platforms
 
-For a long time, I thought leaving platforms empty was the most compatible thing to do. However, this leave the effective platform/version up to the compiler. And, that can produce surprising results that change over time. Being explicit is best.
+For a long time, I thought leaving platforms empty was the most compatible thing to do. However, this leaves the effective platform/version up to the compiler. And, that can produce surprising results that change over time. Being explicit is best.
 
 ### Swift 5.8
 
