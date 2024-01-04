@@ -14,8 +14,8 @@ on:
       - main
 
 concurrency:
-    group: ${{ github.head_ref }}
-    cancel-in-progress: true
+  group: ${{ github.head_ref }}
+  cancel-in-progress: true
 
 env:
   DEVELOPER_DIR: /Applications/Xcode_15.1.app/Contents/Developer
