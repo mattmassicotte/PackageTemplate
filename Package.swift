@@ -1,25 +1,39 @@
-// swift-tools-version: 5.8
+// swift-tools-version: 5.9
 
 import PackageDescription
 
-let settings: [SwiftSetting] = [
-	.enableExperimentalFeature("StrictConcurrency")
-]
-
 let package = Package(
 	name: "Template",
+    platforms: [
+        .macOS(.v10_15),
+        .iOS(.v12),
+        .tvOS(.v12),
+        .watchOS(.v5),
+        .macCatalyst(.v13),
+        .visionOS(.v1),
+    ],
 	products: [
 		.library(name: "Template", targets: ["Template"]),
 	],
 	targets: [
 		.target(
-			name: "Template",
-			swiftSettings: settings
+			name: "Template"
 		),
 		.testTarget(
 			name: "TemplateTests",
-			dependencies: ["Template"],
-			swiftSettings: settings
+			dependencies: ["Template"]
 		),
 	]
 )
+
+let swiftSettings: [SwiftSetting] = [
+    .enableExperimentalFeature("StrictConcurrency"),
+    .enableUpcomingFeature("DisableOutwardActorInference"),
+    .enableUpcomingFeature("IsolatedDefaultValues"),
+]
+
+for target in package.targets {
+    var settings = target.swiftSettings ?? []
+    settings.append(contentsOf: swiftSettings)
+    target.swiftSettings = settings
+}

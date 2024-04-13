@@ -17,18 +17,21 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
   cancel-in-progress: true
 
-env:
-  DEVELOPER_DIR: /Applications/Xcode_15.2.app/Contents/Developer
-
 jobs:
   test:
     name: Test
-    runs-on: macOS-13
+    runs-on: macOS-14
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_15.3.app/Contents/Developer
     strategy:
       matrix:
         destination:
           - "platform=macOS"
-          - "platform=iOS Simulator,name=iPhone 12"
+          - "platform=iOS Simulator,name=iPhone 15"
+          - "platform=tvOS Simulator,name=Apple TV"
+          - "platform=visionOS Simulator,name=Apple Vision Pro"
+          - "platform=watchOS Simulator,name=Apple Watch Series 6 (40mm)"
+          - "platform=macOS,variant=Mac Catalyst"
 
     steps:
       - uses: actions/checkout@v4
