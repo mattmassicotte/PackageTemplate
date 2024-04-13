@@ -72,9 +72,23 @@ If you are using GitHub sponsorships, you know how this works. But just in case,
 
 For a long time, I thought leaving platforms empty was the most compatible thing to do. However, this leaves the effective platform/version up to the compiler. And, that can produce surprising results that change over time. Being explicit is best.
 
-### Swift 5.8
+### Swift 5.9
 
-This allows you to use `.enableExperimentalFeature("StrictConcurrency")`. Using concurrency without compiler checks is a bad idea. And you may be using it without even realizing it. `enableExperimentalFeature` requires 5.8, but the actual checks themselves require 5.9.
+This allows two things: better concurrency checking and visionOS support. Using concurrency without compiler checks is a bad idea. And you may be using it without even realizing it. I have this dialed all the way up for all targets. It is slightly ugly, but I prefer to have maximum checking without having to manually adjust if I add targets.
+
+```swift
+let swiftSettings: [SwiftSetting] = [
+    .enableExperimentalFeature("StrictConcurrency"),
+    .enableUpcomingFeature("DisableOutwardActorInference"),
+    .enableUpcomingFeature("IsolatedDefaultValues"),
+]
+
+for target in package.targets {
+    var settings = target.swiftSettings ?? []
+    settings.append(contentsOf: swiftSettings)
+    target.swiftSettings = settings
+}
+```
 
 ## GitHub Actions
 
