@@ -72,7 +72,7 @@ If you are using GitHub sponsorships, you know how this works. But just in case,
 
 For a long time, I thought leaving platforms empty was the most compatible thing to do. However, this leaves the effective platform/version up to the compiler. And, that can produce surprising results that change over time. Being explicit is best.
 
-### Swift 5.9
+### Swift 5.10
 
 This allows two things: better concurrency checking and visionOS support. Using concurrency without compiler checks is a bad idea. And you may be using it without even realizing it. I have this dialed all the way up for all targets. It is slightly ugly, but I prefer to have maximum checking without having to manually adjust if I add targets.
 
@@ -80,7 +80,6 @@ This allows two things: better concurrency checking and visionOS support. Using 
 let swiftSettings: [SwiftSetting] = [
     .enableExperimentalFeature("StrictConcurrency"),
     .enableUpcomingFeature("DisableOutwardActorInference"),
-    .enableUpcomingFeature("IsolatedDefaultValues"),
 ]
 
 for target in package.targets {
@@ -89,6 +88,8 @@ for target in package.targets {
     target.swiftSettings = settings
 }
 ```
+
+I got this idea from [Keith Harrison](https://useyourloaf.com/blog/strict-concurrency-checking-in-swift-packages/).
 
 ## GitHub Actions
 

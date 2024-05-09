@@ -1,4 +1,4 @@
-// swift-tools-version: 5.9
+// swift-tools-version: 5.10
 
 import PackageDescription
 
@@ -29,7 +29,6 @@ let package = Package(
 let swiftSettings: [SwiftSetting] = [
     .enableExperimentalFeature("StrictConcurrency"),
     .enableUpcomingFeature("DisableOutwardActorInference"),
-    .enableUpcomingFeature("IsolatedDefaultValues"),
 ]
 
 for target in package.targets {
