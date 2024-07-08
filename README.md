@@ -95,7 +95,7 @@ for target in package.targets {
 
 I got this idea from [Keith Harrison](https://useyourloaf.com/blog/strict-concurrency-checking-in-swift-packages/).
 
-Also, its worth noting that I have added features here that are available in Swift 5.10. But, if you may want to adopt some Swift 6 features as well. You **can** do this without sacrificing 5.10 compatibility with conditional compilation in your sources.
+Also, it's worth noting that I have added features here that are available in Swift 5.10. But, you may want to adopt some Swift 6 features as well. You **can** do this without sacrificing 5.10 compatibility with conditional compilation in your sources.
 
 ## GitHub Actions
 
