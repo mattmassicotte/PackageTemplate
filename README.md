@@ -1,6 +1,10 @@
+<div align="center">
+
 [![Build Status][build status badge]][build status]
 [![Platforms][platforms badge]][platforms]
 [![Documentation][documentation badge]][documentation]
+
+</div>
 
 # PackageTemplate
 A template for Swift packages on GitHub
@@ -91,6 +95,8 @@ for target in package.targets {
 
 I got this idea from [Keith Harrison](https://useyourloaf.com/blog/strict-concurrency-checking-in-swift-packages/).
 
+Also, its worth noting that I have added features here that are available in Swift 5.10. But, if you may want to adopt some Swift 6 features as well. You **can** do this without sacrificing 5.10 compatibility with conditional compilation in your sources.
+
 ## GitHub Actions
 
 GitHub actions are mostly great. But there are two things that make them very un-great. GitHub is incredibly slow about bringing up new versions of macOS. This means "macOS-latest" is **never** the latest released version of macOS. That alone might be a problem for a package that supports macOS. But, it can also impact the default Xcode version.
@@ -127,7 +133,7 @@ Perhaps the most underrated feature. If you include DocC in your package, SPI wi
 
 For a very long time, I thought tabs vs spaces was a stupid thing to get worked up about. Then one day I learned that tabs can offer [accessibility improvements](https://adamtuttle.codes/blog/2021/tabs-vs-spaces-its-an-accessibility-issue/) for low-vision people. And that same advantage also helps to style code the way people prefer. So I switched to tabs and I encourage you to do same.
 
-Despite Xcode not supporting it, I still think including [editorconfig](https://editorconfig.org) support is a good idea. I'm a dreamer.
+Xcode supports [editorconfig](https://editorconfig.org), and I think including it is a great idea.
 
 ## Contributing and Feedback
 
