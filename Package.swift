@@ -27,8 +27,10 @@ let package = Package(
 )
 
 let swiftSettings: [SwiftSetting] = [
-    .enableExperimentalFeature("StrictConcurrency"),
-    .enableUpcomingFeature("DisableOutwardActorInference"),
+	.enableExperimentalFeature("StrictConcurrency"),
+	.enableUpcomingFeature("DisableOutwardActorInference"),
+	.enableUpcomingFeature("GlobalActorIsolatedTypesUsability"),
+	.enableUpcomingFeature("InferSendableFromCaptures"),
 ]
 
 for target in package.targets {
