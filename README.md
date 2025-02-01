@@ -78,12 +78,14 @@ For a long time, I thought leaving platforms empty was the most compatible thing
 
 ### Swift 5.10
 
-This allows two things: better concurrency checking and visionOS support. Using concurrency without compiler checks is a bad idea. And you may be using it without even realizing it. I have this dialed all the way up for all targets. It is slightly ugly, but I prefer to have maximum checking without having to manually adjust if I add targets.
+This allows two things: better concurrency checking and visionOS support. Using concurrency without compiler checks is a bad idea. And you may be using it without even realizing it. I have this dialed all the way up for all targets. It is slightly ugly, but I prefer to have maximum checking and capabilities without having to manually adjust if I add targets.
 
 ```swift
 let swiftSettings: [SwiftSetting] = [
     .enableExperimentalFeature("StrictConcurrency"),
     .enableUpcomingFeature("DisableOutwardActorInference"),
+    .enableUpcomingFeature("GlobalActorIsolatedTypesUsability"),
+    .enableUpcomingFeature("InferSendableFromCaptures"),
 ]
 
 for target in package.targets {
