@@ -76,12 +76,15 @@ If you are using GitHub sponsorships, you know how this works. But just in case,
 
 For a long time, I thought leaving platforms empty was the most compatible thing to do. However, this leaves the effective platform/version up to the compiler. And, that can produce surprising results that change over time. Being explicit is best.
 
-### Swift 5.10
+### Swift 6.0
 
-This allows two things: better concurrency checking and visionOS support. Using concurrency without compiler checks is a bad idea. And you may be using it without even realizing it. I have this dialed all the way up for all targets. It is slightly ugly, but I prefer to have maximum checking and capabilities without having to manually adjust if I add targets.
+Personally, I have found maintaining support for Swift 5 *compiler* extremely hard. Swift 6 has been out for a while, and I think it is ok to move along.
+
+However, you might want to remain in the Swift 5 *language mode*. So. I've made that the default here. But if you do decide to go to 6 mode, you can just delete everything here.
 
 ```swift
 let swiftSettings: [SwiftSetting] = [
+    .swiftLanguageMode(.v5),
     .enableExperimentalFeature("StrictConcurrency"),
     .enableUpcomingFeature("DisableOutwardActorInference"),
     .enableUpcomingFeature("GlobalActorIsolatedTypesUsability"),
@@ -97,11 +100,10 @@ for target in package.targets {
 
 I got this idea from [Keith Harrison](https://useyourloaf.com/blog/strict-concurrency-checking-in-swift-packages/).
 
-Also, it's worth noting that I have added features here that are available in Swift 5.10. But, you may want to adopt some Swift 6 features as well. You **can** do this without sacrificing 5.10 compatibility with conditional compilation in your sources.
-
 ## GitHub Actions
 
-GitHub actions are mostly great. But there are two things that make them very un-great. GitHub is incredibly slow about bringing up new versions of macOS. This means "macOS-latest" is **never** the latest released version of macOS. That alone might be a problem for a package that supports macOS. But, it can also impact the default Xcode version.
+GitHub actions are mostly great. They have gotten better about releasing new macOS versions. But, it's still worth rememebering that 
+"macOS-latest" may not actually be the released version. However, they are fairly good about keeping newer Xcode versions available.
 
 The second problem is simulator names change and `xcodebuild` makes it very hard to not care.
 
@@ -114,6 +116,8 @@ I have given up relying on defaults here, and I always make things explicit. Unf
 If you have tricks/hacks/custom actions to make this better, **please** let me know.
 
 Note! If your package contains more than one entry it its `products` array, you'll need to append `-Package` to the scheme name to get `xcodebuild` tests to work.
+
+This stuff also matters for Linux builds, if you want to run them. I use [swiftly-action](https://github.com/vapor/swiftly-action) for this, but hopefully one day [swiftly](https://github.com/swiftlang/swiftly) is just built into the GitHub action runner images.  keep the Swift version here the same as whatever comes with the Xcode version I'm using.
 
 ## Swift Package Index
 
