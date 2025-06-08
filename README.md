@@ -117,7 +117,7 @@ If you have tricks/hacks/custom actions to make this better, **please** let me k
 
 Note! If your package contains more than one entry it its `products` array, you'll need to append `-Package` to the scheme name to get `xcodebuild` tests to work.
 
-This stuff also matters for Linux builds, if you want to run them. I use [swiftly-action](https://github.com/vapor/swiftly-action) for this, but hopefully one day [swiftly](https://github.com/swiftlang/swiftly) is just built into the GitHub action runner images.  keep the Swift version here the same as whatever comes with the Xcode version I'm using.
+This stuff also matters for Linux builds, if you want to run them. I use [swiftly-action](https://github.com/vapor/swiftly-action) for this, but hopefully one day [swiftly](https://github.com/swiftlang/swiftly) is just built into the GitHub action runner images.
 
 ## Swift Package Index
 
@@ -143,7 +143,7 @@ Xcode supports [editorconfig](https://editorconfig.org), and I think including i
 
 ## Contributing and Feedback
 
-I'd love to hear from you! Get in touch via [mastodon](https://mastodon.social/@mattiem), an issue, or a pull request.
+I'd love to hear from you! Get in touch via an issue, pull request, or find me [here](https://www.massicotte.org).
 
 By participating in this project you agree to abide by the [Contributor Code of Conduct](CODE_OF_CONDUCT.md).
 
