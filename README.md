@@ -52,7 +52,7 @@ Many people find explicit package installation instructions helpful, even just f
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/ChimeHQ/PackageTemplate", from: "1.0.0")
+    .package(url: "https://github.com/mattmassicotte/PackageTemplate", from: "1.0.0")
 ],
 targets: [
     .target(
