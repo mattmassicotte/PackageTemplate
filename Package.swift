@@ -32,6 +32,7 @@ let swiftSettings: [SwiftSetting] = [
 	.enableUpcomingFeature("DisableOutwardActorInference"),
 	.enableUpcomingFeature("GlobalActorIsolatedTypesUsability"),
 	.enableUpcomingFeature("InferSendableFromCaptures"),
+	.enableUpcomingFeature("NonisolatedNonsendingByDefault"),
 ]
 
 for target in package.targets {

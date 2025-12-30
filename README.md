@@ -80,7 +80,7 @@ For a long time, I thought leaving platforms empty was the most compatible thing
 
 Personally, I have found maintaining support for Swift 5 *compiler* extremely hard. Swift 6 has been out for a while, and I think it is ok to move along.
 
-However, you might want to remain in the Swift 5 *language mode*. So. I've made that the default here. But if you do decide to go to 6 mode, you can just delete everything here.
+However, you might want to remain in the Swift 5 *language mode*. So. I've made that the default here. But if you do decide to go to 6 mode, you can just delete everything here except for `NonisolatedNonsendingByDefault`, which is new in 6.2.
 
 ```swift
 let swiftSettings: [SwiftSetting] = [
@@ -89,6 +89,7 @@ let swiftSettings: [SwiftSetting] = [
     .enableUpcomingFeature("DisableOutwardActorInference"),
     .enableUpcomingFeature("GlobalActorIsolatedTypesUsability"),
     .enableUpcomingFeature("InferSendableFromCaptures"),
+    .enableUpcomingFeature("NonisolatedNonsendingByDefault"),
 ]
 
 for target in package.targets {
