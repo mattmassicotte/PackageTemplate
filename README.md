@@ -118,7 +118,7 @@ If you have tricks/hacks/custom actions to make this better, **please** let me k
 
 Note! If your package contains more than one entry it its `products` array, you'll need to append `-Package` to the scheme name to get `xcodebuild` tests to work.
 
-This stuff also matters for Linux builds, if you want to run them. I use [swiftly-action](https://github.com/vapor/swiftly-action) for this, but hopefully one day [swiftly](https://github.com/swiftlang/swiftly) is just built into the GitHub action runner images.
+This stuff also matters for Linux builds, if you want to run them. The [swiftly-action](https://github.com/vapor/swiftly-action) is an option here, but I have found using the offical Docker images to be both faster and more reliable.
 
 ## Swift Package Index
 
