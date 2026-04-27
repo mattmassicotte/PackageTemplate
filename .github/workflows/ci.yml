@@ -44,6 +44,10 @@ jobs:
     container:
       image: swift:${{matrix.swift-version}}
     timeout-minutes: 30
+    strategy:
+      matrix:
+        swift-version:
+          - "latest"
     steps:
       - name: Checkout
         uses: actions/checkout@v6
